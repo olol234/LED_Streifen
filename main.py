@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import programs.lowlevel as lowlevel
+import programs.led_control as led
 
 app = Flask(__name__)
 
@@ -9,7 +9,7 @@ def main():
 
 @app.route("/on")
 def action():
-    lowlevel.lowlevel()
+    led.green()
     return render_template('main.html')
 
 if __name__ == "__main__":
