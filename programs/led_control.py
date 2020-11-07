@@ -10,4 +10,4 @@ def off():
     pixels.fill((0,0,0))
 
 def colorpicker():
-    pixels.fill((0,0,0))
+    pixels.fill(())
