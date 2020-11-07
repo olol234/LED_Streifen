@@ -11,4 +11,4 @@ def green():
 
 def colorpicker():
     x = request.form['#ff0000']
-    pixels.fill((x))
+    pixels.fill((0,0,0))
