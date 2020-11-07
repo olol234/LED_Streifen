@@ -1,5 +1,6 @@
-from flask import Flask, render_template, favcolor, request
+from flask import Flask, render_template, request
 import programs.led_control as led
+from main.html import value
 
 app = Flask(__name__)
 
@@ -14,7 +15,7 @@ def action():
 
 @app.route("/action_page.php")
 def action1():
-    led.colorpicker(favcolor)
+    led.colorpicker(value)
     return render_template('main.html')
 
 if __name__ == "__main__":
