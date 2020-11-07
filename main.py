@@ -9,7 +9,7 @@ def main():
 
 @app.route("/on")
 def action():
-    led.green(color)
+    led.green()
     return render_template('main.html')
 
 if __name__ == "__main__":
