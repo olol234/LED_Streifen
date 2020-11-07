@@ -15,7 +15,7 @@ def action():
 
 @app.route("/action_page.php")
 def action1():
-    x = request.from['favcolor']
+    x = request.form['favcolor']
     led.colorpicker(x)
     return render_template('main.html')
 
