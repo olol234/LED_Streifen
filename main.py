@@ -11,7 +11,7 @@ def main():
 def action():
     led.green()
     return render_template('main.html')
-
+@app.route("/Submit")
 def action():
     led.colorpicker(favcolor)
     return render_template('main.html')
