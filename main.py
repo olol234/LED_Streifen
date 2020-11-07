@@ -14,7 +14,7 @@ def action():
 
 @app.route("/action_page.php")
 def action1():
-    led.colorpicker(color=)
+    led.colorpicker(color)
     return render_template('main.html')
 
 if __name__ == "__main__":
