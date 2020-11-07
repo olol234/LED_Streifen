@@ -13,7 +13,7 @@ def action():
     return render_template('main.html')
 
 @app.route("/action_page.php")
-def action():
+def action1():
     led.colorpicker(favcolor)
     return render_template('main.html')
 
