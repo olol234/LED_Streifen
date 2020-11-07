@@ -14,7 +14,7 @@ def action():
     return render_template('main.html')
 
 @app.route("/off")
-def action():
+def action2():
     led.off()
     return render_template('main.html')
 
