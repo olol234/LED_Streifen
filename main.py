@@ -13,6 +13,11 @@ def action():
     led.green()
     return render_template('main.html')
 
+@app.route("/off")
+def action():
+    led.off()
+    return render_template('main.html')
+
 @app.route("/action_page.php")
 def action1():
     led.colorpicker()
