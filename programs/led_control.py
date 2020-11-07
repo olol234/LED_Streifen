@@ -1,5 +1,8 @@
 import board
 import neopixel
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
 
 pixels = neopixel.NeoPixel(board.D18, 109)
 
