@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import programs.led_control as led
-from RPiWebServer import value
+from main import value
 
 app = Flask(__name__)
 
