@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import programs.led_control as led
-from main.html import value
+from flask import value
 
 app = Flask(__name__)
 
