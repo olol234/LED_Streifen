@@ -1,4 +1,4 @@
-from flask import Flask, render_template, value, request
+from flask import Flask, render_template, request
 import programs.led_control as led
 
 
@@ -15,7 +15,8 @@ def action():
 
 @app.route("/action_page.php")
 def action1():
-    led.colorpicker()
+    x = request.from["#ff0000"]
+    led.colorpicker(x)
     return render_template('main.html')
 
 if __name__ == "__main__":
