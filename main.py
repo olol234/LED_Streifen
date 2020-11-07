@@ -12,9 +12,5 @@ def action():
     led.green()
     return render_template('main.html')
 
-def action():
-    led.colourpicker()
-    return render_template('main.html')
-
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, debug=True)
