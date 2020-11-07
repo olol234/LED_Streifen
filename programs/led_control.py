@@ -3,5 +3,5 @@ import neopixel
 
 pixels = neopixel.NeoPixel(board.D18, 109)
 
-def green(color):
+def green():
     pixels.fill((0,255,0))
