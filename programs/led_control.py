@@ -9,5 +9,8 @@ def green():
 def off():
     pixels.fill((0,0,0))
 
-def colorpicker():
-    pixels.fill(())
+def colorpicker(color_string):
+
+    hex = color_string.lstrip('#')
+    hlen = len(color_string)
+    pixels.fill(tuple(int(hex[i:i + hlen // 3], 16) for i in range(0, hlen, hlen // 3)))

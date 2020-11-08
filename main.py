@@ -18,7 +18,7 @@ def action2():
     led.off()
     return render_template('main.html')
 
-@app.route("/colorpicker", methods=['POST'])
+@app.route("/colorpicker", methods=['GET','POST'])
 def action1():
     color_string= request.form['favcolor']
     print(color_string)
