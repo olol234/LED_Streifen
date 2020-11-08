@@ -21,7 +21,7 @@ def action2():
 
 @app.route("/wheel")
 def action2():
-    led.off()
+    led.wheel()
     return render_template('main.html')
 
 @app.route("/colorpicker", methods=['GET','POST'])
