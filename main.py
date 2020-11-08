@@ -4,6 +4,7 @@ import programs.led_control as led
 
 app = Flask(__name__)
 
+x = request.form['']
 @app.route("/")
 def main():
     return render_template('main.html')
@@ -18,8 +19,10 @@ def action2():
     led.off()
     return render_template('main.html')
 
-@app.route("/action_page.php")
+@app.route("/colorpicker", methods=['POST'])
 def action1():
+    color_string= request.form['favcolor']
+    print(color_string)
     led.colorpicker()
     return render_template('main.html')
 
