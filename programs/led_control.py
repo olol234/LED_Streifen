@@ -1,7 +1,6 @@
 import board
 import neopixel
-var pos = 0
-ORDER = neopixel.RGB
+pos = 0
 
 num_pixels = 109
 pixels = neopixel.NeoPixel(board.D18, num_pixels)

@@ -10,23 +10,23 @@ def main():
     return render_template('main.html')
 
 @app.route("/on")
-def action():
+def on():
     led.green()
     return render_template('main.html')
 
 @app.route("/off")
-def action2():
+def off():
     led.off()
     return render_template('main.html')
 
 @app.route("/rainbow")
-def action3():
+def wheel():
     led.wheel()
     return render_template('main.html')
 
 
 @app.route("/colorpicker", methods=['GET','POST'])
-def action1():
+def colorpicker():
     color_string = request.form['favcolor']
     led.colorpicker(color_string)
     return render_template('main.html')
