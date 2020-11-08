@@ -13,4 +13,4 @@ def colorpicker(color_string):
 
     color_string = color_string.lstrip('#')
     hlen = len(color_string)
-    pixels.fill(tuple(int(hex[i:i + hlen // 3], 16) for i in range(0, hlen, hlen // 3)))
+    pixels.fill(tuple(int(color_string[i:i + hlen // 3], 16) for i in range(0, hlen, hlen // 3)))
