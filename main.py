@@ -18,6 +18,11 @@ def action2():
     led.off()
     return render_template('main.html')
 
+@app.route("/wheel")
+def action2():
+    led.off()
+    return render_template('main.html')
+
 @app.route("/colorpicker", methods=['GET','POST'])
 def action1():
     color_string = request.form['favcolor']
