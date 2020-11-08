@@ -1,6 +1,6 @@
 import board
 import neopixel
-pos = 0
+
 
 num_pixels = 109
 pixels = neopixel.NeoPixel(board.D18, num_pixels, auto_write=False)
