@@ -1,7 +1,5 @@
 import board
 import neopixel
-pos = 0
-
 
 ORDER = neopixel.RGB
 
