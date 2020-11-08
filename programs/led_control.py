@@ -7,7 +7,7 @@ def green():
     pixels.fill((9,138,236))
 
 def off():
-    pixels.fill((ff0000))
+    pixels.fill((0,0,0))
 
 def colorpicker():
     pixels.fill(())
