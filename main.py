@@ -20,9 +20,8 @@ def action2():
 
 @app.route("/colorpicker", methods=['GET','POST'])
 def action1():
-    color_string= request.form['favcolor']
-    print(color_string)
-    led.colorpicker()
+    color_string = request.form['favcolor']
+    led.colorpicker(color_string)
     return render_template('main.html')
 
 if __name__ == "__main__":

@@ -11,6 +11,6 @@ def off():
 
 def colorpicker(color_string):
 
-    hex = color_string.lstrip('#')
+    color_string = color_string.lstrip('#')
     hlen = len(color_string)
     pixels.fill(tuple(int(hex[i:i + hlen // 3], 16) for i in range(0, hlen, hlen // 3)))
