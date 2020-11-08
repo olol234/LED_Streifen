@@ -2,7 +2,8 @@ import board
 import neopixel
 import time
 
-pixels = neopixel.NeoPixel(board.D18, 109)
+num_pixels = 109
+pixels = neopixel.NeoPixel(board.D18, num_pixels)
 
 def green():
     pixels.fill((9,138,236))
