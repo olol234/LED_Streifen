@@ -3,7 +3,7 @@ import neopixel
 pos = 0
 
 num_pixels = 109
-pixels = neopixel.NeoPixel(board.D18, num_pixels, auto_wirte=False)
+pixels = neopixel.NeoPixel(board.D18, num_pixels, auto_write=False)
 
 def green():
     pixels.fill((9,138,236))
