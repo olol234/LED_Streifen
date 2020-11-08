@@ -21,8 +21,9 @@ def off():
 
 @app.route("/rainbow")
 def wheel():
-    pos = 0
+    pos = 5
     led.wheel(pos)
+    print(pos)
     return render_template('main.html')
 
 
