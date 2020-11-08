@@ -4,7 +4,6 @@ import programs.led_control as led
 
 app = Flask(__name__)
 
-x = request.form['']
 @app.route("/")
 def main():
     return render_template('main.html')
