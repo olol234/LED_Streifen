@@ -27,6 +27,6 @@ def wheel(pos):
     if pos < 170:
         pos -= 85
         pixels.fill(0, 255 - pos * 3, pos * 3)
-     else
+else:
     pos -= 170
     pixels.fill(pos * 3, 0, 255 - pos * 3)
