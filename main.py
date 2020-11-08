@@ -20,7 +20,8 @@ def off():
     return render_template('main.html')
 
 @app.route("/rainbow")
-def wheel(pos):
+def wheel():
+    pos = 0
     led.wheel()
     return render_template('main.html')
 
