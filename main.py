@@ -19,13 +19,6 @@ def off():
     led.off()
     return render_template('main.html')
 
-@app.route("/rainbow")
-def wheel():
-    pos = 5
-    led.wheel(pos)
-    print(pos)
-    return render_template('main.html')
-
 
 @app.route("/colorpicker", methods=['GET','POST'])
 def colorpicker():
