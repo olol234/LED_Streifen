@@ -18,7 +18,7 @@ def colorpicker(color_string):
     pixels.fill(tuple(int(color_string[i:i + hlen // 3], 16) for i in range(0, hlen, hlen // 3)))
 
 def Wheel(pos):
-    """Generate rainbow colors across 0-255 positions."""
+
     if pos < 85:
        pixels.fill((pos * 3, 255 - pos * 3, 0))
     elif pos < 170:
