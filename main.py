@@ -21,7 +21,7 @@ def off():
 
 @app.route("/Wheel")
 def Wheel():
-    pos = 0
+    pos = 90
     led.Wheel(pos)
     return render_template('main.html')
 
