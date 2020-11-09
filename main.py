@@ -23,7 +23,7 @@ def off():
  @app.route("/Wheel")
  def off():
     pos = 0
-    led.wheel(pos)
+    led.Wheel(pos)
     return render_template('main.html')
 
 
