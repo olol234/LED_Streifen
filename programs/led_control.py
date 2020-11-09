@@ -1,6 +1,7 @@
 import board
 import neopixel
 import threading
+import time
 
 num_pixels = 109
 pixels = neopixel.NeoPixel(board.D18, num_pixels)
@@ -19,18 +20,21 @@ def colorpicker(color_string):
     hlen = len(color_string)
     pixels.fill(tuple(int(color_string[i:i + hlen // 3], 16) for i in range(0, hlen, hlen // 3)))
 
-def wheel_thread(pos):
+def wheel_thread():
+    pos = 0
     while (wheel_execute):
+        time.sleep(2)
         if pos < 85:
-            pixels.fill((pos * 3, 255 - pos * 3, 0))
+            pixels.fill((pos, 255 - pos, 0))
+            pos = 255 - pos
         elif pos < 170:
-            pos -= 85
-            pixels.fill((255 - pos * 3, 0, pos * 3))
+            pixels.fill((255 - pos , 0, pos ))
+            pos -= 90
         else:
-            pos -= 170
-            pixels.fill((0, pos * 3, 255 - pos * 3))
+            pixels.fill((0, pos, 255 - pos ))
+            pos -= 90
 
-def wheel(pos):
+def wheel():
     wheel_execute = True
-    x = threading.Thread(target=wheel_thread, args=(pos,))
+    x = threading.Thread(target=wheel_thread, args=())
     x.start()
