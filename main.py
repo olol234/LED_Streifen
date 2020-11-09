@@ -16,11 +16,10 @@ def on():
 
 @app.route("/off")
 def off():
-
     led.off()
     return render_template('main.html')
 
- @app.route("/Wheel")
+@app.route("/Wheel")
 def off():
     pos = 0
     led.Wheel(pos)
