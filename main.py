@@ -16,7 +16,14 @@ def on():
 
 @app.route("/off")
 def off():
+
     led.off()
+    return render_template('main.html')
+
+@app.route("/wheel)
+def off():
+    pos = 0
+    led.wheel(pos)
     return render_template('main.html')
 
 
@@ -28,3 +35,4 @@ def colorpicker():
 
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, debug=True)
+
