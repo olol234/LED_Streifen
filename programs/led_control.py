@@ -11,6 +11,7 @@ def green():
     pixels.fill((9,138,236))
 
 def off():
+    global wheel_execute
     wheel_execute = False
     pixels.fill((0,0,0))
 
@@ -22,6 +23,7 @@ def colorpicker(color_string):
 
 def wheel_thread():
     pos = 0
+    global wheel_execute
     while (wheel_execute):
         time.sleep(2)
         if pos < 85:
@@ -35,6 +37,8 @@ def wheel_thread():
             pos -= 90
 
 def wheel():
-    wheel_execute = True
-    x = threading.Thread(target=wheel_thread, args=())
-    x.start()
+    global wheel_execute
+    if not wheel_execute:
+        wheel_execute = True
+        x = threading.Thread(target=wheel_thread, args=())
+        x.start()
