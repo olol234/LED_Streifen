@@ -24,6 +24,13 @@ def random():
     led.random()
     return render_template('main.html')
 
+
+@app.route("/rainbow")
+def rainbow():
+    led.rainbow_cycle()
+    return render_template('main.html')
+
+
 @app.route("/Wheel")
 def Wheel():
     led.wheel()
