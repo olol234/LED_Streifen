@@ -68,12 +68,12 @@ def rainbow():
         x.start()
 
 def rainbow_cycle(wait):
-RED = (255, 0, 0)
-YELLOW = (255, 150, 0)
-GREEN = (0, 255, 0)
-CYAN = (0, 255, 255)
-BLUE = (0, 0, 255)
-PURPLE = (180, 0, 255)
+    RED = (255, 0, 0)
+    YELLOW = (255, 150, 0)
+    GREEN = (0, 255, 0)
+    CYAN = (0, 255, 255)
+    BLUE = (0, 0, 255)
+    PURPLE = (180, 0, 255)
 
     global rainbow_execute
     while (rainbow_execute):
@@ -83,8 +83,6 @@ PURPLE = (180, 0, 255)
             pixels[i] = wheel(rc_index & 255)
         pixels.show()
         time.sleep(wait
-
-
 
 
 while True:
