@@ -29,11 +29,6 @@ def Wheel():
     led.wheel()
     return render_template('main.html')
 
-@app.route("/wheel2")
-def wheel2():
-    led.wheel2()
-    return render_template('main.html')
-
 
 @app.route("/colorpicker", methods=['GET','POST'])
 def colorpicker():
