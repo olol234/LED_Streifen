@@ -57,11 +57,10 @@ def wheel2():
     global wheel_execute
     if not wheel_execute:
         wheel_execute = True
-        x = threading.Thread(target=wheel_thread, args=())
+        x = threading.Thread(target=wheel2_thread, args=())
         x.start()
 
 def wheel2_thread():
- """Generate rainbow colors across 0-255 positions."""
     pos = 90
     global wheel_execute
     while (wheel_execute):
