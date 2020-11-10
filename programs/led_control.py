@@ -12,7 +12,7 @@ def green():
     pixels.fill((9,138,236))
 
 def random():
-    r = random.random()*255
+    r = random.randint(0,255)
     g = random.randint(0,255)
     b = random.randint(0,255)
     pixels.fill((r,g,b))
@@ -38,10 +38,10 @@ def wheel_thread():
             pos = 255 - pos
         elif pos < 170:
             pixels.fill((255 - pos , 0, pos ))
-            pos -= 90
+            pos -= 60
         else:
             pixels.fill((0, pos, 255 - pos ))
-            pos -= 90
+            pos -= 85
 
 def wheel():
     global wheel_execute
