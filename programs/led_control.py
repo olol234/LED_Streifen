@@ -36,12 +36,13 @@ def wheel_thread():
         time.sleep(2)
         if pos < 85:
             pixels.fill((pos * 3, 255 - pos * 3, 0))
+            pos = 255-pos
         elif pos < 170:
-            pos -= 85
+            pos -= 90
             pixels.fill((255 - pos * 3, 0, pos * 3))
         else:
-            pos -= 170
             pixels.fill((0, pos * 3, 255 - pos * 3))
+            pos -= 90
 
 
 def wheel():
