@@ -2,6 +2,7 @@ import board
 import neopixel
 import threading
 import time
+import random
 
 num_pixels = 109
 pixels = neopixel.NeoPixel(board.D18, num_pixels)
