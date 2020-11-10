@@ -12,7 +12,7 @@ def green():
     pixels.fill((9,138,236))
 
 def random():
-    r = random.randint(0,255)
+    r = random.random()*255
     g = random.randint(0,255)
     b = random.randint(0,255)
     pixels.fill((r,g,b))
