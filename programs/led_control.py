@@ -30,7 +30,7 @@ def colorpicker(color_string):
 
 def wheel_thread():
     colors = [(255,0,0),
-              (255,113,8),
+              (255,90,0),
               (255,255,0),
               (51,255,0),
               (0,255,204),
@@ -41,7 +41,7 @@ def wheel_thread():
     i = 0
     global wheel_execute
     while (wheel_execute):
-        time.sleep(2)
+        time.sleep(1)
         pixels.fill(colors[i])
         i += 1
         if (i >= len(colors)):
