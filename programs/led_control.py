@@ -34,14 +34,14 @@ def wheel_thread():
               (255,255,0),
               (51,255,0),
               (0,255,204),
-              (0,225,255),
+              (0,200,255),
               (0,0,255),
               (200,0,255),
               ]
     i = 0
     global wheel_execute
     while (wheel_execute):
-        time.sleep(1)
+        time.sleep(2)
         pixels.fill(colors[i])
         i += 1
         if (i >= len(colors)):
@@ -52,3 +52,25 @@ def wheel():
         wheel_execute = True
         x = threading.Thread(target=wheel_thread, args=())
         x.start()
+
+def wheel2():
+    global wheel_execute
+    if not wheel_execute:
+        wheel_execute = True
+        x = threading.Thread(target=wheel_thread, args=())
+        x.start()
+
+def wheel2_thread():
+ """Generate rainbow colors across 0-255 positions."""
+    pos = 90
+    global wheel_execute
+    while (wheel_execute):
+        time.sleep(2)
+        if pos < 85:
+        pixels.fill((pos * 3, 255 - pos * 3, 0))
+        elif pos < 170:
+        pos -= 85
+        pixels.fill((255 - pos * 3, 0, pos * 3))
+        else:
+        pos -= 170
+        pixels.fill((0, pos * 3, 255 - pos * 3))
