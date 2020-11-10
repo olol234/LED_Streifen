@@ -10,6 +10,9 @@ wheel_execute = False
 def green():
     pixels.fill((9,138,236))
 
+def random():
+    pixels.fill((random.randint(0,255),random.randint(0,255),random.randint(0,255)))
+
 def off():
     global wheel_execute
     wheel_execute = False

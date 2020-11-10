@@ -19,6 +19,11 @@ def off():
     led.off()
     return render_template('main.html')
 
+@app.route("/random")
+def random():
+    led.random()
+    return render_template('main.html')
+
 @app.route("/Wheel")
 def Wheel():
     led.wheel()
