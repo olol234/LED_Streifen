@@ -12,7 +12,7 @@ def green():
     pixels.fill((9,138,236))
 
 def random():
-    pixels.fill((randrange(0,255),randrange(0,255),randrange(0,255)))
+    pixels.fill((random.randrange(0,255),random.randrange(0,255),random.randrange(0,255)))
 
 def off():
     global wheel_execute
