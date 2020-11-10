@@ -19,6 +19,11 @@ def off():
     led.off()
     return render_template('main.html')
 
+@app.route("/reset")
+def reset():
+    led.reset()
+    return render_template('main.html')
+
 @app.route("/random")
 def random():
     led.random()

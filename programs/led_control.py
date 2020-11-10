@@ -19,6 +19,9 @@ def random():
     pixels.fill((r,g,b))
 
 def off():
+    pixels.fill((0,0,0))
+
+def reset():
     global wheel_execute
     wheel_execute = False
     pixels.fill((0,0,0))
