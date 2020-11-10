@@ -7,6 +7,7 @@ import random
 num_pixels = 109
 pixels = neopixel.NeoPixel(board.D18, num_pixels)
 wheel_execute = False
+wheel_execute2 = False
 
 def green():
     pixels.fill((9,138,236))
@@ -54,16 +55,16 @@ def wheel():
         x.start()
 
 def wheel2():
-    global wheel_execute
-    if not wheel_execute:
-        wheel_execute = True
+    global wheel_execute2
+    if not wheel_execute2:
+        wheel_execute2 = True
         x = threading.Thread(target=wheel2_thread, args=())
         x.start()
 
 def wheel2_thread():
     pos = 90
-    global wheel_execute
-    while (wheel_execute):
+    global wheel_execute2
+    while (wheel_execute2):
         time.sleep(2)
         if pos < 85:
         pixels.fill((pos * 3, 255 - pos * 3, 0))
