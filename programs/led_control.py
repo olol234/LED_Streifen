@@ -29,20 +29,17 @@ def colorpicker(color_string):
     pixels.fill(tuple(int(color_string[i:i + hlen // 3], 16) for i in range(0, hlen, hlen // 3)))
 
 def wheel_thread():
-    pos = 0
+    colors = [(255, 120, 0),
+              (0, 120, 0),
+              (255, 120, 0)]
+    i = 0
     global wheel_execute
     while (wheel_execute):
         time.sleep(2)
-        if pos < 85:
-            pixels.fill((pos, 255 - pos, 0))
-            pos = 255 - pos
-        elif pos < 170:
-            pixels.fill((255 - pos , 0, pos ))
-            pos -= 60
-        else:
-            pixels.fill((0, pos, 255 - pos ))
-            pos -= 85
-
+        pixels.fill(colors[i])
+        i += 1
+        if (i >= len(colors)):
+            i = 0
 def wheel():
     global wheel_execute
     if not wheel_execute:
