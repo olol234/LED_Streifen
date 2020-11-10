@@ -24,7 +24,6 @@ def off():
 def reset():
     global wheel_execute
     wheel_execute = False
-    pixels.fill((0,0,0))
 
 def colorpicker(color_string):
 
