@@ -34,6 +34,11 @@ def Wheel():
     led.wheel()
     return render_template('main.html')
 
+@app.route("/FadeRGB")
+def Wheel():
+    led.fadergb()
+    return render_template('main.html')
+
 
 @app.route("/colorpicker", methods=['GET','POST'])
 def colorpicker():
