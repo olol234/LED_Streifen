@@ -13,11 +13,6 @@ fadergb_execute = False
 def green():
     pixels.fill((9,138,236))
 
-def random():
-    r = random.randint(0,255)
-    g = random.randint(0,255)
-    b = random.randint(0,255)
-    pixels.fill((r,g,b))
 
 def off():
     pixels.fill((0,0,0))
@@ -64,7 +59,7 @@ def fadergb_thread():
             # Fade In.
             for j in range(0, 255):
                 if i == 0:
-                    pixels.fill((j, 0, 0))
+                    pixels.fill((j, 255, 255))
                 elif i == 1:
                     pixels.fill((0, j, 0))
                 elif i == 2:
