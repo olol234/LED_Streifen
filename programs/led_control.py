@@ -22,6 +22,8 @@ def reset():
     global fadergb_thread
     wheel_execute = False
     fadergb_thread = False
+    pixels.fill((0,0,0))
+
 def colorpicker(color_string):
 
     color_string = color_string.lstrip('#')
@@ -59,7 +61,7 @@ def fadergb_thread():
             # Fade In.
             for j in range(0, 255):
                 if i == 0:
-                    pixels.fill((j, 250, 250))
+                    pixels.fill((j, 0, 0))
                 elif i == 1:
                     pixels.fill((0, j, 0))
                 elif i == 2:
