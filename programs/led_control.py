@@ -37,15 +37,15 @@ def colorpicker(color_string):
     #global wheel_execute
     #while (wheel_execute):
    #     time.sleep(2)
-        if pos < 85:
-            pixels.fill((pos, 255 - pos, 0))
-            pos = 255 - pos
-        elif pos < 170:
-            pixels.fill((255 - pos , 0, pos ))
-            pos -= 90
-        else:
-            pixels.fill((0, pos, 255 - pos ))
-            pos -= 90
+    #    if pos < 85:
+     #       pixels.fill((pos, 255 - pos, 0))
+      #      pos = 255 - pos
+       # elif pos < 170:
+        #    pixels.fill((255 - pos , 0, pos ))
+         #   pos -= 90
+        #else:
+         #   pixels.fill((0, pos, 255 - pos ))
+          #  pos -= 90
 
 def wheel():
     global wheel_execute
