@@ -63,18 +63,18 @@ def wheel_thread():
             # Fade In.
             for j in range(0, 256):
                 if i == 0:
-                    SetAll(pixels, Color(j, 0, 0))
+                    pixels.fill((j, 0, 0))
                 elif i == 1:
-                    SetAll(pixels, Color(0, j, 0))
+                    pixels.fill((0, j, 0))
                 elif i == 2:
-                    SetAll(pixels, Color(0, 0, j))
+                    pixels.fill((0, 0, j))
                 pixels.show()
                 # Fade Out.
             for j in range(256, 0, -1):
                 if i == 0:
-                    SetAll(pixels, Color(j, 0, 0))
+                    pixels.fill((j, 0, 0))
                 elif i == 1:
-                    SetAll(pixels, Color(0, j, 0))
+                    pixels.fill((0, j, 0))
                 elif i == 2:
-                    SetAll(pixels, Color(0, 0, j))
+                    pixels.fill((0, 0, j))
                 pixels.show()
