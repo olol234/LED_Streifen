@@ -59,22 +59,20 @@ def wheel():
 def wheel_thread():
     global wheel_execute
     while (wheel_execute):
-        for i in range(0, 3):
-            #Fade In.
-            for j in range (0, 256):
-                if i == 0:
-                    pixels.fill((j, 0, 0))
-                elif i == 1:
-                    pixels.fill((0, j, 0))
-                elif i == 2:
-                    pixels.fill((0, 0, j))
-                pixels.show()
-            #Fade Out.
-            for j in range (256, 0, -1):
-                if i == 0:
-                    pixels.fill((j, 0, 0))
-                elif i == 1:
-                    pixels.fill((0, j, 0))
-                elif i == 2:
-                    pixels.fill((0, 0, j))
-                pixels.show()
+        for j in range(0, 256):
+            if i == 0:
+                SetAll(pixels, Color(j, 0, 0))
+            elif i == 1:
+                SetAll(pixels, Color(0, j, 0))
+            elif i == 2:
+                SetAll(pixels, Color(0, 0, j))
+            pixels.show()
+            # Fade Out.
+        for j in range(256, 0, -1):
+            if i == 0:
+                SetAll(pixels, Color(j, 0, 0))
+            elif i == 1:
+                SetAll(pixels, Color(0, j, 0))
+            elif i == 2:
+                SetAll(pixels, Color(0, 0, j))
+            pixels.show()
