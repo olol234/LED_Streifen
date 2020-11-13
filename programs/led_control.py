@@ -19,9 +19,9 @@ def off():
 
 def reset():
     global wheel_execute
-    global fadergb_thread
+    global fadergb_execute
     wheel_execute = False
-    fadergb_thread = False
+    fadergb_execute = False
     pixels.fill((0,0,0))
 
 def colorpicker(color_string):
