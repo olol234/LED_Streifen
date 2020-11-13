@@ -56,7 +56,7 @@ def wheel():
 
 
 
-def wheel_thread(pixels):
+def wheel_thread():
     global wheel_execute
     while (wheel_execute):
         for i in range(0, 3):
@@ -69,6 +69,7 @@ def wheel_thread(pixels):
                 elif i == 2:
                     pixels.fill((0, 0, j))
                 pixels.show()
+                time.sleep(0.5)
                 # Fade Out.
             for j in range(256, 0, -1):
                 if i == 0:
@@ -78,3 +79,4 @@ def wheel_thread(pixels):
                 elif i == 2:
                     pixels.fill((0, 0, j))
                 pixels.show()
+                time.sleep(0.5)
