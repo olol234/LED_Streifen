@@ -57,6 +57,8 @@ def wheel():
 
 
 def wheel_thread():
+    i = 1
+    k = 5
     global wheel_execute
     while (wheel_execute):
         for i in range(0, 3):
