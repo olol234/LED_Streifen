@@ -61,7 +61,7 @@ def wheel_thread():
     while (wheel_execute):
         for i in range(0, 3):
             # Fade In.
-            for j in range(0, 256):
+            for j in range(0, 255):
                 if i == 0:
                     pixels.fill((j, 0, 0))
                 elif i == 1:
@@ -71,7 +71,7 @@ def wheel_thread():
                 pixels.show()
                 time.sleep(0.1)
                 # Fade Out.
-            for j in range(256, 0, -1):
+            for j in range(255, 0, -1):
                 if i == 0:
                     pixels.fill((j, 0, 0))
                 elif i == 1:
