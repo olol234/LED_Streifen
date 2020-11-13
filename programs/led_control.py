@@ -70,7 +70,7 @@ def wheel_thread():
                     pixels.fill((0, j, 0))
                 elif i == 2:
                     pixels.fill((0, 0, j))
-                strip.show()
+                pixels.show()
             #Fade Out.
             for j in range (256, 0, -1):
                 if i == 0:
@@ -79,4 +79,4 @@ def wheel_thread():
                     pixels.fill((0, j, 0))
                 elif i == 2:
                     pixels.fill((0, 0, j))
-                strip.show()
+                pixels.show()
