@@ -59,7 +59,7 @@ def fadergb_thread():
             # Fade In.
             for j in range(0, 255):
                 if i == 0:
-                    pixels.fill((j, 255, 255))
+                    pixels.fill((j, 250, 250))
                 elif i == 1:
                     pixels.fill((0, j, 0))
                 elif i == 2:
