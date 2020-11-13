@@ -56,7 +56,7 @@ def wheel():
 
 
 
-def wheel_thread():
+def wheel_thread(pixels):
     global wheel_execute
     while (wheel_execute):
         for i in range(0, 3):
