@@ -5,7 +5,7 @@ import time
 import random
 
 num_pixels = 109
-pixels = neopixel.NeoPixel(board.D18, num_pixels, brightness= 0.2, auto_wirte=False)
+pixels = neopixel.NeoPixel(board.D18, num_pixels)
 
 wheel_execute = False
 
