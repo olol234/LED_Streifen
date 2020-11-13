@@ -5,7 +5,8 @@ import time
 import random
 
 num_pixels = 109
-pixels = neopixel.NeoPixel(board.D18, num_pixels)
+pixels = neopixel.NeoPixel(board.D18, num_pixels, brightness= 0.2, auto_wirte=False)
+
 wheel_execute = False
 
 
@@ -54,3 +55,24 @@ def wheel():
         x.start()
 
 
+
+def FadeRGB(strip):
+    for i in range(0, 3):
+        #Fade In.
+        for j in range (0, 256):
+            if i == 0:
+                pixels.fill((j, 0, 0))
+            elif i == 1:
+                pixels.fill((0, j, 0))
+            elif i == 2:
+                pixels.fill((0, 0, j))
+            strip.show()
+        #Fade Out.
+        for j in range (256, 0, -1):
+            if i == 0:
+                pixels.fill((j, 0, 0))
+            elif i == 1:
+                pixels.fill((0, j, 0))
+            elif i == 2:
+                pixels.fill((0, 0, j))
+            strip.show()
