@@ -32,10 +32,10 @@ def colorpicker(color_string):
     hlen = len(color_string)
     pixels.fill(tuple(int(color_string[i:i + hlen // 3], 16) for i in range(0, hlen, hlen // 3)))
 
-def wheel_thread():
+#def wheel_thread():
     pos = 0
-    global wheel_execute
-    while (wheel_execute):
+    #global wheel_execute
+    #while (wheel_execute):
         time.sleep(2)
         if pos < 85:
             pixels.fill((pos, 255 - pos, 0))
@@ -56,23 +56,25 @@ def wheel():
 
 
 
-def FadeRGB(strip):
-    for i in range(0, 3):
-        #Fade In.
-        for j in range (0, 256):
-            if i == 0:
-                pixels.fill((j, 0, 0))
-            elif i == 1:
-                pixels.fill((0, j, 0))
-            elif i == 2:
-                pixels.fill((0, 0, j))
-            strip.show()
-        #Fade Out.
-        for j in range (256, 0, -1):
-            if i == 0:
-                pixels.fill((j, 0, 0))
-            elif i == 1:
-                pixels.fill((0, j, 0))
-            elif i == 2:
-                pixels.fill((0, 0, j))
-            strip.show()
+def wheel_thread():
+    global wheel_execute
+    while (wheel_execute):
+        for i in range(0, 3):
+            #Fade In.
+            for j in range (0, 256):
+                if i == 0:
+                    pixels.fill((j, 0, 0))
+                elif i == 1:
+                    pixels.fill((0, j, 0))
+                elif i == 2:
+                    pixels.fill((0, 0, j))
+                strip.show()
+            #Fade Out.
+            for j in range (256, 0, -1):
+                if i == 0:
+                    pixels.fill((j, 0, 0))
+                elif i == 1:
+                    pixels.fill((0, j, 0))
+                elif i == 2:
+                    pixels.fill((0, 0, j))
+                strip.show()
