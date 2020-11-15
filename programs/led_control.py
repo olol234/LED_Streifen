@@ -95,9 +95,9 @@ def theaterchase():
 def theaterchase_thread():
     global theaterchase_ecexute
     while (theaterchase_ecexute):
-        for i in range(0, 3):
-            for k in range(0, num_pixels-1, 3):
-                pixels[k+i] = (255,0,0)
-            time.sleep(1)
-            for k in range(0, num_pixels-1, 3):
-                pixels[k+i] = (0,0,0)
+        for i in range(num_pixels):
+            if i %3 == 0:
+                neopixel.setPixelColor(i,(255,0,0))
+            else:
+                neopixel.setPixelColor(i,(0,0,0))
+        neopixel.show()
