@@ -39,6 +39,11 @@ def FadeRGB():
     led.fadergb()
     return render_template('main.html')
 
+@app.route("/theaterChase")
+def theaterChase():
+    led.theaterchase()
+    return render_template('main.html')
+
 
 @app.route("/colorpicker", methods=['GET','POST'])
 def colorpicker():

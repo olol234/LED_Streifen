@@ -9,6 +9,7 @@ pixels = neopixel.NeoPixel(board.D18, num_pixels)
 
 wheel_execute = False
 fadergb_execute = False
+theaterchase_ecexute = False
 
 def green():
     pixels.fill((9,138,236))
@@ -20,8 +21,10 @@ def off():
 def reset():
     global wheel_execute
     global fadergb_execute
+    global theaterchase_ecexute
     wheel_execute = False
     fadergb_execute = False
+    theaterchase_ecexute = False
     pixels.fill((0,0,0))
 
 def colorpicker(color_string):
@@ -84,3 +87,19 @@ def fadergb():
         fadergb_execute = True
         x = threading.Thread(target=fadergb_thread, args=())
         x.start()
+
+def theaterchase():
+    global theaterchase_ecexute
+    if not theaterchase_ecexute:
+        theaterchase_ecexute = True
+        x = threading.Thread(target=theaterchase_thread, args=())
+        x.start()
+
+def theaterchase_thread():
+    for j in range(0, 3):
+	    for k in range(0, LED_COUNT, 3):
+            pixels[k + j] = (255,0,0)
+		strip.show()
+		time.sleep(0.5)
+		for k in range(0, LED_COUNT, 3):
+			pixels[k + j] = (0,0,0)
