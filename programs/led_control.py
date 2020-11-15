@@ -100,6 +100,5 @@ def theaterchase_thread():
         for i in range(0, 3):
             for k in range(0, num_pixels, 3):
                 pixels[k+i] = (255,0,0)
-                time.sleep(0.1)
             for k in range(0, num_pixels, 3):
                 pixels[k+i] = (0,0,0)
