@@ -96,11 +96,22 @@ def theaterchase():
 def theaterchase_thread(wait=0.3):
     global theaterchase_ecexute
     while (theaterchase_ecexute):
-        for k in range(0,3):
-            for i in range(num_pixels-k):
-                if i %3 == 0:
-                    pixels[i+k] = (255,0,0)
-                else:
-                    pixels[i+k] = (0,0,0)
-            time.sleep(wait)
-            pixels.show()
+        for j in range(25):
+            for k in range(0,3):
+                for i in range(num_pixels-k):
+                    if i %3 == 0:
+                        pixels[i+k] = rainbowcolor((j+i)%255)
+                    else:
+                        pixels[i+k] = (0,0,0)
+                time.sleep(wait)
+                pixels.show()
+
+def rainbowcolor(wheel_pos):
+    if wheel_pos < 85:
+        return (wheel_pos * 3, 255 - wheel_pos * 3, 0)
+    elif wheel_pos < 170:
+        wheel_pos -= 85
+        return (255 - wheel_pos * 3, 0, wheel_pos * 3)
+    else:
+        wheel_pos -= 170
+        return (0, wheel_pos * 3, 255 - wheel_pos * 3)
