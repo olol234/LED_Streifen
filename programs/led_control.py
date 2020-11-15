@@ -97,7 +97,7 @@ def theaterchase_thread():
     while (theaterchase_ecexute):
         for i in range(num_pixels):
             if i %3 == 0:
-                neopixel.setPixelColor(i,(255,0,0))
+                pixels.setPixelColor(i,(255,0,0))
             else:
-                neopixel.setPixelColor(i,(0,0,0))
-        neopixel.show()
+                pixels.setPixelColor(i,(0,0,0))
+        pixels.show()
