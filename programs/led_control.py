@@ -5,7 +5,7 @@ import time
 import random
 
 num_pixels = 109
-pixels = neopixel.NeoPixel(board.D18, num_pixels)
+pixels = Adafruit_NeoPixel(num_pixels,board.D18)
 
 wheel_execute = False
 fadergb_execute = False
