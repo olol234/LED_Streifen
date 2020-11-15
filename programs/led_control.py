@@ -97,7 +97,7 @@ def theaterchase():
 
 def theaterchase_thread():
 
-    for i in range(0, 1):
+    for i in range(0, 3):
         for k in range(0, num_pixels, 3):
         if i == 0:
             pixels[k+i] = (255,0,0)
