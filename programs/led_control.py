@@ -95,10 +95,11 @@ def theaterchase():
 def theaterchase_thread():
     global theaterchase_ecexute
     while (theaterchase_ecexute):
-        for i in range(num_pixels):
-            if i %3 == 0:
-                pixels[i] = (255,0,0)
-            else:
-                pixels[i] = (0,0,0)
-        time.sleep(1)
-        pixels.show()
+        for k in range(0,3):
+            for i in range(num_pixels-k):
+                if i %3 == 0:
+                    pixels[i+k] = (255,0,0)
+                else:
+                    pixels[i+k] = (0,0,0)
+            time.sleep(1)
+            pixels.show()
