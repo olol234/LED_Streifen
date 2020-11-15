@@ -96,9 +96,20 @@ def theaterchase():
         x.start()
 
 def theaterchase_thread():
-    for j in range(0, 2000):
-        for i in range(0, 4):
-            for k in range(0, num_pixels, 3):
-                pixels[k+i] = (255,0,0)
-            for k in range(0, num_pixels, 3):
+
+    for i in range(0, 1):
+        for k in range(0, num_pixels, 3):
+        if i == 0:
+            pixels[k+i] = (255,0,0)
+        elif i == 1:
+            pixels[k+i] = (255,0,0)
+        elif i == 2:
+            pixels[k+i] = (255,0,0)
+
+        for k in range(0, num_pixels, 3):
+            if i == 0:
+                pixels[k+i] = (0,0,0)
+            elif i == 1:
+                pixels[k+i] = (0,0,0)
+            elif i == 2:
                 pixels[k+i] = (0,0,0)
