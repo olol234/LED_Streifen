@@ -100,4 +100,5 @@ def theaterchase_thread():
                 pixels[i] = (255,0,0)
             else:
                 pixels[i] = (0,0,0)
+        time.sleep(1)
         pixels.show()
