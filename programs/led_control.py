@@ -93,7 +93,7 @@ def theaterchase():
         x = threading.Thread(target=theaterchase_thread, args=())
         x.start()
 
-def theaterchase_thread():
+def theaterchase_thread(wait=0.3):
     global theaterchase_ecexute
     while (theaterchase_ecexute):
         for k in range(0,3):
@@ -102,5 +102,5 @@ def theaterchase_thread():
                     pixels[i+k] = (255,0,0)
                 else:
                     pixels[i+k] = (0,0,0)
-            time.sleep(1)
+            time.sleep(wait)
             pixels.show()
