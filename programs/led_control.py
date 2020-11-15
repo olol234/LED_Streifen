@@ -61,7 +61,6 @@ def fadergb_thread():
     global fadergb_execute
     while (fadergb_execute):
         for i in range(0, 3):
-            # Fade In.
             for j in range(0, 255):
                 if i == 0:
                     pixels.fill((j, 0, 0))
@@ -69,9 +68,7 @@ def fadergb_thread():
                     pixels.fill((0, j, 0))
                 elif i == 2:
                     pixels.fill((0, 0, j))
-                pixels.show()
 
-                # Fade Out.
             for j in range(255, 0, -1):
                 if i == 0:
                     pixels.fill((j, 0, 0))
@@ -79,7 +76,7 @@ def fadergb_thread():
                     pixels.fill((0, j, 0))
                 elif i == 2:
                     pixels.fill((0, 0, j))
-                pixels.show()
+
 
 def fadergb():
     global fadergb_execute
