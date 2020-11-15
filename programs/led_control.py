@@ -97,9 +97,9 @@ def theaterchase():
 
 def theaterchase_thread():
     for j in range(0, 3):
-	    for k in range(0, LED_COUNT, 3):
+        for k in range(0, LED_COUNT, 3):
             pixels[k + j] = (255,0,0)
-		strip.show()
-		time.sleep(0.5)
-		for k in range(0, LED_COUNT, 3):
-			pixels[k + j] = (0,0,0)
+            strip.show()
+        time.sleep(0.5)
+        for k in range(0, LED_COUNT, 3):
+            pixels[k + j] = (0,0,0)
