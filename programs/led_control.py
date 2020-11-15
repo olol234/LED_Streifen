@@ -96,7 +96,7 @@ def theaterchase():
 def theaterchase_thread(wait=0.3):
     global theaterchase_ecexute
     while (theaterchase_ecexute):
-        for j in range(0,255,15):
+        for j in range(0,255,30):
             for k in range(0,3):
                 for i in range(num_pixels-k):
                     if i %3 == 0:
