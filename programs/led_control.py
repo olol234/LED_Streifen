@@ -26,6 +26,7 @@ def reset():
     fadergb_execute = False
     theaterchase_ecexute = False
     pixels.fill((0,0,0))
+    pixels.show()
 
 def colorpicker(color_string):
 
