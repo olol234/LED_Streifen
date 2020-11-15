@@ -96,7 +96,7 @@ def theaterchase_thread():
     global theaterchase_ecexute
     while (theaterchase_ecexute):
         for i in range(0, 3):
-            for k in range(0, num_pixels, 3):
+            for k in range(0, num_pixels-1, 3):
                 pixels[k+i] = (255,0,0)
-            for k in range(0, num_pixels, 3):
+            for k in range(0, num_pixels-1, 3):
                 pixels[k+i] = (0,0,0)
