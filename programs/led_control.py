@@ -5,7 +5,7 @@ import time
 import random
 
 num_pixels = 109
-pixels = Adafruit_NeoPixel(num_pixels,board.D18)
+pixels = neopixel.NeoPixel(board.D18, num_pixels,auto_write = False)
 
 wheel_execute = False
 fadergb_execute = False
@@ -97,7 +97,7 @@ def theaterchase_thread():
     while (theaterchase_ecexute):
         for i in range(num_pixels):
             if i %3 == 0:
-                pixels.setPixelColor(i,(255,0,0))
+                pixels[i] = (255,0,0)
             else:
-                pixels.setPixelColor(i,(0,0,0))
+                pixels[i] = (0,0,0)
         pixels.show()
