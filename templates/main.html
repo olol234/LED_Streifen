@@ -1,58 +1,24 @@
 <!DOCTYPE html>
+<html lang="de">
 <head>
-   <title>RPiWebServer</title>
-   <!-- Latest compiled and minified CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-   <!-- Optional theme -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-   <!-- Latest compiled and minified JavaScript -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <title>LED-Steuerung</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
-<div class="jumbotron text-center">
-  <h1>LED Web Server</h1>
-</div>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4">
-       <a href="/on" class="btn btn-lg btn-block btn-primary" role="button">Turn on</a>
-    </div>
-    <div class="col-md-4">
-      <a href="/off" class="btn btn-lg btn-block btn-primary" role="button">Turn off</a>
-    </div>
-    <div class="col-md-4">
-      <a href="/reset" class="btn btn-lg btn-block btn-primary" role="button">Reset</a>
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid pt-3; text-align:left">
-    <div class="row">
-      <div class="col-md-3">
-          <a href="/FadeRGB" class="btn btn-lg btn-lg btn-primary" role="button">FadeRGB</a>
-      </div>
-      <div class="col-md-3">
-          <a href="/Wheel" class="btn btn-lg btn-lg btn-primary" role="button">Wheel</a>
-          </div>
-      <div class="col-md-3">
-          <a href="/random" class="btn btn-lg btn-lg btn-primary" role="button">random</a>
-          </div>
-      <div class="col-md-3">
-          <a href="/theaterChase" class="btn btn-lg btn-lg btn-primary" role="button">theaterChase</a>
-          </div>
-    </div>
-</div>
-
-
-
-<form action="/colorpicker" method="post">
-   <label for="favcolor">Select your favorite color:</label>
-   <input type="color" id="favcolor" name="favcolor" value="#ff0000">
-   <input type="submit" value="Submit">
-</form>
-
+    <h1>LED Web Server</h1>
+    <p>
+    <a href="/reset">Reset</a>
+    <a href="/on">ON</a>
+    </p>
+    <p>
+    <a href="/theaterChase">theaterChase</a>
+    <a href="/wheel">Wheel</a>
+    <a href="/fadeRGB">FadeRGB</a>
+    <a href="/on">ON</a>
+    <a href="/on">ON</a>
+    </p>
 
 </body>
 </html>
