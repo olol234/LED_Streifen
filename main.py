@@ -4,6 +4,7 @@ import programs.led_control as led
 
 
 app = Flask(__name__)
+app.static_folder = "/static"
 
 @app.route("/")
 def main():
