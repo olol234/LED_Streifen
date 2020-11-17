@@ -35,7 +35,7 @@ def Wheel():
     led.wheel()
     return render_template('main.html')
 
-@app.route("/FadeRGB")
+@app.route("/fadeRGB")
 def fadeRGB():
     led.fadergb()
     return render_template('main.html')
