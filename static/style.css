@@ -22,7 +22,7 @@
 h1 {
     color: #3385ff;
     font-family: sans-serif;
-    margin-top: 20px;
+    margin-top: 21px;
     font-size: 3em;
     text-align: center;
 }
@@ -126,7 +126,6 @@ h1 {
 .buttons-group .button:not(:last-child) {
   border-bottom: none; /* Prevent double borders */
 }
-
 
 
 
