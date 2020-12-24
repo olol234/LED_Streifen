@@ -10,6 +10,11 @@ app = Flask(__name__)
 def main():
     return render_template('main.html')
 
+@app.route("/test")
+def test():
+    led.test()
+    return render_template('main.html')
+
 @app.route("/on")
 def on():
     led.green()

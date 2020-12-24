@@ -16,6 +16,10 @@ def green():
     pixels.show()
 
 
+def test():
+    pixels.fill((100,138,236))
+    pixels.show()
+
 def off():
     pixels.fill((0,0,0))
     pixels.show()
