@@ -4,7 +4,7 @@ import threading
 import time
 import random
 
-num_pixels = 30
+num_pixels = 100
 pixels = neopixel.NeoPixel(board.D18, num_pixels,auto_write = False)
 
 wheel_execute = False
