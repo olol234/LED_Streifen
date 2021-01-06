@@ -62,6 +62,8 @@ def colorpicker():
     color_string = request.form['favcolor']
     led.colorpicker(color_string)
     return render_template('main.html')
+
+
 @app.route("/light")
 def light():
     return render_template('light.html')
