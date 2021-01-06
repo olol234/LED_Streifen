@@ -1,28 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <link rel="stylesheet" href='/static/stylemain.css'   />
     <title>LED-Steuerung</title>
-
+    <link rel="stylesheet" href='/static/stylemain.css'   />
 </head>
+
+
 <body>
-
-    <div id="navigation">
-
-        <div class="wrapper">
-
-            <h1>LED-Steuerung
-            </h1>
-            <p id="menu">
-                <a href="{{url_for('main')}}">LICHT
-                </a>
-            </p>
+    <div class="col-4">
+        <div class ="header">
+            <h1>Smarthome</h1>
+            <button>"Datum"</button>
         </div>
     </div>
+    <div class="row">
+      <div class="col-3 menu">
+        <ul>
+          <li><a href="{{ url_for('main')}}">Startseite</a></li>
+          <li><a href="/lights">Licht</a></li>
+          <li><a href="/flower">Pflanzen</a></li>
+          <li><a href="/heat">Heizung</a></li>
+          <li><a href="/temp">Innentemperatur</a></li>
+          <li><a href="/tempout">Außentemperatur</a></li>
+          <li><a href="/options">Einstellungen</a></li>
+        </ul>
+      </div>
 
-    <div id="banner">
-
-    </div>
+    <div class="col-9">
 
     <div id="functions">
 
@@ -73,6 +78,14 @@
         </div>
 
     </div>
+      </div>
+      <div class="col-2">
+      </div>
+      <div class="col-12">
+      </div>
+
+    </div>
 
 </body>
 </html>
+ml>
