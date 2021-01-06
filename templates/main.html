@@ -1,76 +1,39 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <link rel="stylesheet" href='/static/stylemain.css'   />
     <title>LED-Steuerung</title>
-
+    <link href="style1.css" rel="stylesheet" type="text/css">
 </head>
+
+
 <body>
-
-    <div id="navigation">
-
-        <div class="wrapper">
-
-            <h1>LED-Steuerung
-            </h1>
-            <p id="menu">
-                <a href="{{url_for('light')}}">LICHT
-                </a>
-            </p>
+    <div class="col-4">
+        <div class ="header">
+            <h1>Smarthome</h1>
+            <button>"Datum"</button>
         </div>
     </div>
+    <div class="row">
+      <div class="col-3 menu">
+        <ul>
+          <li><a href="/main">Hauptmenü</a></li>
+          <li><a href="{{ url_for('licht')}}">Licht</a></li>
+          <li><a href="/flower">Pflanzen</a></li>
+          <li><a href="/heat">Heizung</a></li>
+          <li><a href="/temp">Innentemperatur</a></li>
+          <li><a href="/tempout">Außentemperatur</a></li>
+          <li><a href="/options">Einstellungen</a></li>
+        </ul>
+      </div>
 
-    <div id="banner">
-
-    </div>
-
-    <div id="functions">
-
-        <div class="wrapper">
-
-            <div class="container">
-                <a href="on">Tur On</a>
-                <a href="reset">Reset</a>
-            </div>
-
-            <div class="container2">
-
-                <div class ="buttons-group">
-                    <button class="button">Fade_RGB</button>
-                    <div class ="buttons-group1">
-                        <a href="/fadeRGB">Strip1</a>
-                        <a href="#">Strip2</a>
-                    </div>
-                </div>
-
-                <div class ="buttons-group">
-                    <button class="button">TheaterChase</button>
-                    <div class ="buttons-group1">
-                        <a href="/theaterChase">Strip1</a>
-                        <a href="#">Strip2</a>
-                    </div>
-                </div>
-
-                <div class ="buttons-group">
-                    <button class="button">Wheel</button>
-                    <div class ="buttons-group1">
-                        <a href="/wheel">Strip1</a>
-                        <a href="#">Strip2</a>
-                    </div>
-                </div>
-
-                <div class ="buttons-group">
-                    <button class="button">Rainbow</button>
-                    <div class ="buttons-group1">
-                        <a href="#">Strip1</a>
-                        <a href="#">Strip2</a>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
+      <div class="col-9">
+        <h1>Center</h1>
+        <p>"Hauptfunktion der jeweiligen Seite"</p>
+      </div>
+      <div class="col-2">
+      </div>
+      <div class="col-12">
+      </div>
 
     </div>
 

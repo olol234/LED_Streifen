@@ -64,9 +64,9 @@ def colorpicker():
     return render_template('main.html')
 
 
-@app.route("/light")
-def light():
-    return render_template('light.html')
+@app.route("/licht")
+def licht():
+    return render_template('licht.html')
 
 
 
