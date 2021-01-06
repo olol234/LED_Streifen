@@ -6,6 +6,7 @@
 
 </head>
 <body>
+
     <div id="navigation">
 
         <div class="wrapper">
@@ -13,7 +14,7 @@
             <h1>LED-Steuerung
             </h1>
             <p id="menu">
-                <a href="einstellungen">Einstellungen
+                <a href="{{url_for('light'}}">LICHT
                 </a>
             </p>
         </div>
@@ -72,6 +73,6 @@
         </div>
 
     </div>
-    <a href="{{url_for('light'}}">LICHT<a/>
+
 </body>
 </html>
